@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Profile Page</title>
+<style>
+  :root{
+    --bg1: #0b66d0;
+    --bg2: #176be6;
+    --card-bg: #f6f7f9;
+    --accent: #1570ef;
+    --muted: #6b6b6b;
+    --radius: 14px;
+    --card-width: 760px;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  
+  .page {
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+    background: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.06), transparent 8%),
+                linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+  }
+
+  
+  .card {
+    width: min(60%, var(--card-width));
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(11,30,70,0.25);
+    padding: 40px 48px 50px;
+    text-align:center;
+    position:fixed;
+  }
+
+  
+  .card:before{
+    content:"";
+    position:absolute;
+    inset:auto 18px 18px auto;
+    width:80px;height:40px;
+    background:rgba(255,255,255,0.04);
+    border-radius:10px;
+    transform:rotate(-6deg);
+    filter:blur(6px);
+    opacity:0.6;
+  }
+
+  .avatar {
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    margin: 0 auto 18px;
+    overflow:hidden;
+    display:block;
+    border:6px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(14,30,60,0.12);
+    background:#eee;
+  }
+  .avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  h1{
+    margin: 8px 0 6px;
+    font-size:26px;
+    letter-spacing:0.2px;
+    color:#222;
+  }
+
+  .meta{
+    color:var(--muted);
+    margin:10px 0 6px;
+    font-size:15px;
+  }
+
+  .meta small{
+    display:block;
+    margin-top:6px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    background:linear-gradient(180deg, #2b8cff, var(--accent));
+    color:#fff;
+    box-shadow: 0 8px 18px rgba(21,112,239,0.28);
+    transition:transform .14s ease, box-shadow .14s ease;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn:hover{ box-shadow:0 12px 26px rgba(21,112,239,0.32); }
+
+
+  .contact {
+    margin-top:6px;
+    color:var(--muted);
+    font-size:15px;
+  }
+
+  @media (max-width:520px){
+    .card{ padding:28px 20px 40px; }
+    .avatar{ width:120px; height:120px; }
+    h1{ font-size:22px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="card" role="region" aria-label="Profile card">
+      <a class="avatar" href="#" aria-hidden="true">
+        <img src="vikas.jpg" alt="vikas.jpg">
+      </a>
+
+      <h1>VIKAS MAHINDRAKAR</h1>
+
+      <div class="meta" aria-hidden="false">
+        Email: <a href="mailto:vikasmahindrakar2@gmail.com" style="color:inherit; text-decoration:none;">vikas mahindrakar2@gmail.com</a>
+      </div>
+
+      <div class="contact">Phone: <a href="tel:7619306627" style="color:inherit; text-decoration:none;">7619306627</a></div>
+
+      <a class="resume-btn" href="vikas.pdf" target="_blank">Resume </a>
+    </div>
+  </div>
+</body>
+</html>
